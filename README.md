@@ -13,19 +13,19 @@ Total 3 scripts haveen implemented to complete 3 tier App deployment
 
 First script helps to complete following tasks:
 
-Task-1: update the system and enable security
-$sudo yum update -y
-$sudo systemctl stop firewalld
-$sudo setsebool httpd_can_network_connect 1
-Task-2: Create devops user and enable password based authentication
-$echo "devops" | passwd --stdin devops
-$echo 'devops    ALL=(ALL)     NOPASSWD: ALL' | sudo tee -a /etc/sudoers
-$sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-$service sshd restart
+Task-1: update the system and enable security:
+      $ sudo yum update -y
+      $ sudo systemctl stop firewalld
+      $ sudo setsebool httpd_can_network_connect 1
+      
+Task-2: Create devops user and enable password based authentication:
+      $ echo "devops" | passwd --stdin devops
+      $ echo 'devops    ALL=(ALL)     NOPASSWD: ALL' | sudo tee -a /etc/sudoers
+      $ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+      $ service sshd restart
 
 Run the script to setup the tools:
-**
-Login as root user and run the script:**
+Login as root user and run the script:
 
          $ sudo su -
          $ ./scriptname.sh
