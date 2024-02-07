@@ -9,6 +9,7 @@ This 3-tier automation shell script helps to install App environment:
 
 Total 2 scripts haven implemented to complete 3 tier App deployment
 
+Script-1:
 First script helps to install the required tools and packages for 3-tier app automation:
 
 Task-1: update the system and enable security:
@@ -49,6 +50,8 @@ Task-6:
 
          $ mv apache-maven-3.9.6 maven
          $ rm -rf apache-maven-3.9.6-bin.tar.gz
+
+Task-7: 
 
 
 
