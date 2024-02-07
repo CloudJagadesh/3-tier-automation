@@ -106,6 +106,9 @@ Step-12: Installing a mariadb database, choose the development environment packa
       $ sudo systemctl start mariadb
       $ sudo systemctl enable mariadb
 
+Step-13: Clone the Studet-app repository
+
+      $ git clone https://gitlab.com/rns-app/student-app.git
 
 Run the script to setup the tools:
 Login as root user and run the script:
