@@ -34,7 +34,8 @@ cd /opt/student-app/
 
 echo 2 | sudo alternatives --config java
 
-mvn clean package
+sudo su devops -c "cd /opt/student-app && mvn clean package"
+
 echo '1' | sudo alternatives --config java
 
 cp /opt/student-app/target/*.war /opt/tcserver/webapps/student.war
