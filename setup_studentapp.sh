@@ -34,7 +34,7 @@ cd /opt/student-app/
 
 echo 2 | sudo alternatives --config java
 
-sudo su devops -c "cd /opt/student-app && mvn clean package"
+mvn clean package
 
 echo '1' | sudo alternatives --config java
 
