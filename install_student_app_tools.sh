@@ -36,7 +36,7 @@ wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bi
 tar -xzvf apache-maven-3.9.6-bin.tar.gz
 mv apache-maven-3.9.6 maven
 rm -rf apache-maven-3.9.6-bin.tar.gz
-sudo su - devops -c "ln -s /opt/maven/bin/mvn /usr/local/bin/mvn"
+sudo su - devops -c "sudo ln -s /opt/maven/bin/mvn /usr/local/bin/mvn"
 
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
 tar -xzvf apache-tomcat-9.0.85.tar.gz
