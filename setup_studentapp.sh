@@ -1,8 +1,8 @@
 #! /bin/bash
 
-cd /opt/
+cd /opt/student-app
 
-#git clone https://gitlab.com/rns-app/student-app.git
+git pull origin master
 
 mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
@@ -29,10 +29,8 @@ sudo systemctl start tomcat
 
 # Deploying Student App
 
-#sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
-
 cd /opt/student-app/
-git pull origin master
+
 
 echo 2 | sudo alternatives --config java
 
@@ -49,8 +47,6 @@ sudo rm -rf *
 
 cd /opt/
 
-#git clone https://gitlab.com/rns-app/static-project.git
-
 cd static-project/iPortfolio/
 
 sudo cp -R /opt/static-project/iPortfolio/* /usr/share/nginx/html/
@@ -60,6 +56,3 @@ sudo cp /opt/student-app/nginx/nginx.conf /etc/nginx/
 
 sudo systemctl stop nginx
 sudo systemctl start nginx
-
-
-
