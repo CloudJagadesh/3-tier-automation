@@ -82,3 +82,6 @@ sudo systemctl enable mariadb
 #systemctl status mariadb
 
 git clone https://gitlab.com/rns-app/student-app.git
+git clone https://gitlab.com/rns-app/static-project.git
+sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
+
