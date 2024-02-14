@@ -34,7 +34,7 @@ sudo systemctl start tomcat
 cd /opt/student-app/
 
 
-echo 2 | sudo alternatives --config java
+echo '2' | sudo alternatives --config java
 
 sudo su - devops -c "cd /opt/student-app && mvn clean package"
 
