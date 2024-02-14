@@ -4,7 +4,7 @@ cd /opt/student-app
 
 git pull origin master
 
-mysql -uroot < /opt/student-app/dbscript/studentapp.sql
+sudo mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
 # Manager's App Context XML
 
@@ -34,7 +34,7 @@ cd /opt/student-app/
 
 echo 2 | sudo alternatives --config java
 
-sudo su devops -c "mvn clean package"
+mvn clean package
 
 echo '1' | sudo alternatives --config java
 
