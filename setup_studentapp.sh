@@ -4,23 +4,23 @@ cd /opt/student-app
 
 git pull origin master
 
-sudo mysql -uroot < /opt/student-app/dbscript/studentapp.sql
+mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
 # Manager's App Context XML
 
-sudo cp /opt/student-app/tomcat/manager/context.xml /opt/tcserver/webapps/manager/META-INF
+cp /opt/student-app/tomcat/manager/context.xml /opt/tcserver/webapps/manager/META-INF
 
 # Add User to Tomcat
 
-sudo cp /opt/student-app/tomcat/conf/tomcat-users.xml /opt/tcserver/conf/
+cp /opt/student-app/tomcat/conf/tomcat-users.xml /opt/tcserver/conf/
 
 # Load DB Driver
 
-sudo cp /opt/student-app/tomcat/lib/mysql-connector.jar /opt/tcserver/lib/
+cp /opt/student-app/tomcat/lib/mysql-connector.jar /opt/tcserver/lib/
 
 # Integrate Tomcat with DB
 
-sudo cp /opt/student-app/tomcat/conf/context.xml /opt/tcserver/conf/
+cp /opt/student-app/tomcat/conf/context.xml /opt/tcserver/conf/
 
 # Restart the Tomcat SErvice
 
@@ -38,7 +38,9 @@ sudo su - devops -c "cd /opt/student-app && mvn clean package"
 
 echo '1' | sudo alternatives --config java
 
-sudo cp /opt/student-app/target/*.war /opt/tcserver/webapps/student.war
+cd /opt/student-app/ 
+
+cp /opt/student-app/target/*.war /opt/tcserver/webapps/student.war
 
 # Nginx static app deployment
 
