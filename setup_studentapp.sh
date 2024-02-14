@@ -34,12 +34,12 @@ sudo systemctl start tomcat
 cd /opt/student-app/
 
 
-echo '2' | sudo alternatives --config java
+echo 2 | sudo alternatives --config java
 
 sudo su - devops -c "cd /opt/student-app && mvn clean package"
 
 echo '1' | sudo alternatives --config java
- 
+
 cp /opt/student-app/target/*.war /opt/tcserver/webapps/student.war
 
 # Nginx static app deployment
@@ -55,6 +55,7 @@ cd static-project/iPortfolio/
 sudo cp -R /opt/static-project/iPortfolio/* /usr/share/nginx/html/
 
 # Reverse Proxy Configuration
+
 sudo cp /opt/student-app/nginx/nginx.conf /etc/nginx/
 
 sudo systemctl stop nginx
