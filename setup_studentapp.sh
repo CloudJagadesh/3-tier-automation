@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sudo setsebool -P httpd_can_network_connect 1
+
 cd /opt/student-app
 
 git pull origin master
