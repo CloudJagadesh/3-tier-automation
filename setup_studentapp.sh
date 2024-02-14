@@ -4,7 +4,7 @@ cd /opt/student-app
 
 git pull origin master
 
-mysql -uroot < /opt/student-app/dbscript/studentapp.sql
+sudo mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
 # Manager's App Context XML
 
@@ -32,14 +32,12 @@ sudo systemctl start tomcat
 cd /opt/student-app/
 
 
+echo 1 | sudo alternatives --config java
+
+sudo su - devops -c "cd /opt/student-app/ && mvn clean package"
+
 echo 2 | sudo alternatives --config java
-
-sudo su - devops -c "cd /opt/student-app && mvn clean package"
-
-echo '1' | sudo alternatives --config java
-
-cd /opt/student-app/ 
-
+ 
 cp /opt/student-app/target/*.war /opt/tcserver/webapps/student.war
 
 # Nginx static app deployment
