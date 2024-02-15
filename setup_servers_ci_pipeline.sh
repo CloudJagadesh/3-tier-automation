@@ -4,7 +4,7 @@
 sudo systemctl stop firewalld
 # sudo setsebool httpd_can_network_connect 1
 
-sudo hostnamectl set-hostname app-server
+# sudo hostnamectl set-hostname app-server
 
 # add the user devops
 sudo useradd devops
