@@ -45,7 +45,7 @@ echo  ' [UNIT]
         User=devops
         Group=devops
 
-        Environment=JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
+        Environment=JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64
         Environment='JAVA_OPTS=-Djava.awt.headless=true'
         Environment=CATALINA_HOME=/opt/tcserver/
         Environment=CATALINA_BASE=/opt/tcserver/
