@@ -54,7 +54,7 @@ echo  ' [UNIT]
         User=devops
         Group=devops
 
-        Environment=JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
+        Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64
         Environment='JAVA_OPTS=-Djava.awt.headless=true'
         Environment=CATALINA_HOME=/opt/tcserver/
         Environment=CATALINA_BASE=/opt/tcserver/
@@ -71,16 +71,16 @@ systemctl start tomcat
 systemctl enable tomcat
 
 # Install Nginx
-sudo yum install nginx.x86_64 -y
+sudo amazon-linux-extras install nginx1 -y
 systemctl enable nginx
 systemctl start nginx
 
 # Installing MariaDB
-sudo yum install mariadb105-server.x86_64 -y
+sudo yum install mariadb-devel.x86_64 -y
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 #systemctl status mariadb
 
 git clone https://gitlab.com/rns-app/student-app.git
 git clone https://gitlab.com/rns-app/static-project.git
-sudo yum install java-1.8.0-amazon-corretto-devel.x86_64 -y
+sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
