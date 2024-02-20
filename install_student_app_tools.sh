@@ -26,7 +26,7 @@ sudo su - devops -c "git config --global user.name 'devops'"
 sudo su - devops -c "git config --global user.email 'devops@gmail.com'"
 
 # Installing Java 11
-sudo yum install java-11-amazon-corretto.x86_64 -y
+# sudo yum install java-11-amazon-corretto.x86_64 -y
 
 sudo chown -R devops:devops /opt
 
