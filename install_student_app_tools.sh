@@ -76,7 +76,7 @@ systemctl enable nginx
 systemctl start nginx
 
 # Installing MariaDB
-sudo yum install mariadb-devel.x86_64 -y
+sudo amazon-linux-extras install mariadb10.5 -y
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 #systemctl status mariadb
