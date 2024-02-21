@@ -45,7 +45,7 @@ echo  ' [UNIT]
         User=devops
         Group=devops
 
-        Environment=JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64
+        Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64
         Environment='JAVA_OPTS=-Djava.awt.headless=true'
         Environment=CATALINA_HOME=/opt/tcserver/
         Environment=CATALINA_BASE=/opt/tcserver/
@@ -62,12 +62,12 @@ systemctl start tomcat
 systemctl enable tomcat
 
 # Install Nginx
-sudo yum install nginx.x86_64 -y
+sudo amazon-linux-extras install nginx1 -y
 systemctl enable nginx
 systemctl start nginx
 
 # Installing MariaDB
-sudo yum install mariadb105-server.x86_64 -y
+sudo amazon-linux-extras install mariadb10.5 -y
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 #systemctl status mariadb
